@@ -1,17 +1,12 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
+    { "src": "package.json", "use": "@vercel/next" }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "headers": {
-        "Cache-Control": "no-store"
-      },
+      "headers": { "Cache-Control": "no-store" },
       "dest": "/api/$1"
     }
   ]
